@@ -1,34 +1,34 @@
 package com.example.littlelemon.ui.theme
 
+// Import necessary packages
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.littlelemon.R
 
-// Set of Material typography styles to start with
+// Define custom fonts
+val Karla = FontFamily(Font(R.font.karla_regular))
+val Markazi = FontFamily(Font(R.font.markazi_text_regular))
+
+// Define Material 3 Typography styles
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = Karla,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        fontSize = 16.sp
     ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+    displayLarge = TextStyle(
+        fontFamily = Markazi,
+        fontWeight = FontWeight.Bold,
+        fontSize = 48.sp
+    ),
+    headlineSmall = TextStyle(
+        fontFamily = Karla,
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
+        color = PrimaryGreen
     )
-    */
 )
