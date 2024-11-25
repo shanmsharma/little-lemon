@@ -254,7 +254,7 @@ fun MenuCategories(categories: Set<String>, categoryLambda: (sel: String) -> Uni
             .fillMaxWidth()
             .shadow(10.dp, shape = MaterialTheme.shapes.medium),
         shape = MaterialTheme.shapes.medium,
-        colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
+        colors = CardDefaults.elevatedCardColors(containerColor = Color.White)
     ) {
 
         Column(Modifier.padding(horizontal = 20.dp, vertical = 10.dp)) {
