@@ -58,6 +58,7 @@ import com.example.littlelemon.data.MenuItemRoom
 import com.example.littlelemon.navigation.Profile
 import com.example.littlelemon.ui.theme.PrimaryGreen
 import com.example.littlelemon.ui.theme.PrimaryYellow
+import com.example.littlelemon.ui.theme.Secondary2
 
 @Composable
 fun Home(navController: NavHostController) {
@@ -286,23 +287,22 @@ fun MenuCategories(categories: Set<String>, categoryLambda: (sel: String) -> Uni
 
 @Composable
 fun CategoryButton(category: String, selectedCategory: (sel: String) -> Unit) {
-    val isClicked = remember {
-        mutableStateOf(false)
-    }
+    val isClicked = remember { mutableStateOf(false) }
+
     Button(
         onClick = {
             isClicked.value = !isClicked.value
             selectedCategory(category)
-
         },
         colors = ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+            contentColor = PrimaryGreen, // Primary color for content
+            containerColor = Secondary2 // Secondary color for background
         )
     ) {
         Text(text = category)
     }
 }
+
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
